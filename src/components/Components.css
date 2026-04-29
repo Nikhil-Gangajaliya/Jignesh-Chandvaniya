@@ -1,0 +1,666 @@
+/* Components.css - DARK BROWN + CREAM THEME */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding-top: 70px;
+  color: #373737;
+  background: #fdf8f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  /* SPACE ON SIDES */
+}
+
+/* NAVBAR FIXED + PROPER SPACING */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 5%;
+  /* 🔥 THIS FIXES LEFT/RIGHT SPACE */
+  background: #ffffff;
+  z-index: 1000;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo h2 {
+  color: #8B4513;
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #373737;
+  font-weight: 600;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu a:hover {
+  color: #8B4513;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -8px;
+  left: 0;
+  background: #8B4513;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* HERO - NO BLUE OVERLAY */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* margin-top: 70px; */
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(250, 245, 235, 0.55);
+  /* subtle, less intrusive */
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+  margin-right: 5%;
+  text-align: center;
+  z-index: 2;
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #2c1810;
+  line-height: 1.2;
+}
+
+.hero-content h4 {
+  font-size: 1.7rem;
+  margin-bottom: 2.5rem;
+  color: #000000;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-block;
+  background: #8B4513;
+  color: #ffffff;
+  padding: 1.2rem 3rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(139, 69, 19, 0.4);
+  background: #A0522D;
+}
+
+/* =========================
+   ABOUT (REFINED)
+========================= */
+.about {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  /* reduced */
+  background: #fdf8f0;
+}
+
+.about h2 {
+  color: #8B4513;
+  font-size: 2.4rem;
+  /* reduced */
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.about p {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  color: #6b5a4a;
+  text-align: left;
+  word-spacing: 0.09em;
+  line-height: 1.7;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about h4 {
+  color: #A0522D;
+  font-size: 1.3rem;
+  margin: 2rem 0 1.5rem;
+  font-weight: 600;
+}
+
+/* GRID */
+.about ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.2rem;
+  /* tighter */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.about li {
+  background: #ffffff;
+  padding: 1.2rem 1.2rem 1.2rem 3.2rem;
+  /* left space for icon */
+  border-radius: 14px;
+  /* reduced */
+  border: 1px solid #f0e6d6;
+  font-size: 0.95rem;
+  color: #5a4a3a;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+/* ICON */
+.about li::before {
+  content: '✓';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #8B4513;
+  color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+/* REMOVE EXTRA SPAN SHIFT (cleaner) */
+.about li span {
+  padding-left: 0;
+}
+
+/* HOVER (subtle, not heavy) */
+.about li:hover {
+  transform: translateY(-4px);
+  border-color: #8B4513;
+  box-shadow: 0 12px 25px rgba(139, 69, 19, 0.12);
+}
+
+/* =========================
+   SERVICES (IMPROVED)
+========================= */
+.services {
+  padding: 4rem 2rem 3rem;
+}
+
+.services h2 {
+  text-align: center;
+  color: #8B4513;
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+
+  border: 1px solid #f0e6d6;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  transition: 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: #8B4513;
+  box-shadow: 0 12px 25px rgba(139, 69, 19, 0.12);
+}
+
+/* LEFT IMAGE */
+.service-left img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* RIGHT CONTENT */
+.service-right h3 {
+  color: #8B4513;
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.service-right p {
+  color: #6b5a4a;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* =========================
+   PRICING (REFINED)
+========================= */
+.pricing {
+  padding: 3rem 2rem;
+  background: #fdf8f0;
+}
+
+.pricing h2 {
+  text-align: center;
+  color: #8B4513;
+  font-size: 2.4rem;
+  /* reduced */
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  /* tighter */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.price-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 16px;
+  /* less bulky */
+  text-align: left;
+  /* 🔥 important change */
+
+  border: 1px solid #f0e6d6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+
+  transition: 0.25s ease;
+}
+
+/* HOVER (subtle, not dramatic) */
+.price-card:hover {
+  transform: translateY(-5px);
+  border-color: #8B4513;
+  box-shadow: 0 15px 30px rgba(139, 69, 19, 0.12);
+}
+
+/* TITLE */
+.price-card h3 {
+  color: #8B4513;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* DESCRIPTION */
+.price-card p {
+  color: #6b5a4a;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* PRICE */
+.price-card h4 {
+  color: #8B4513;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* =========================
+   CONTACT LAYOUT
+========================= */
+.contact {
+  padding: 3rem 2rem 4rem;
+  background: linear-gradient(135deg, #fdf8f0 0%, #f8f4ec 100%);
+}
+
+.contact h2 {
+  text-align: center;
+  color: #8B4513;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+/* WRAPPER */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  align-items: center;
+}
+
+/* LEFT */
+.contact-left p {
+  margin-bottom: 1.5rem;
+  color: #6b5a4a;
+}
+
+.contact-left ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.contact-left li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* space between icon & text */
+
+}
+
+.contact-left a {
+  color: #8B4513;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* RIGHT (MAP) */
+.contact-right iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  border: none;
+}
+
+.contact-left li i {
+  font-size: 22px;
+  color: #ffffff;
+
+  /* background: #8B4513; */
+  color: #8B4513;
+  /* theme color */
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  flex-shrink: 0;
+  /* prevents shrinking */
+}
+
+.contact-left li:hover i {
+  background: #A0522D;
+}
+
+/* =========================
+   FOOTER (MINIMAL PRO)
+========================= */
+.footer {
+  background: #4f352b;
+  color: #e8d5b7;
+  padding: 2rem 1.5rem 1rem;
+  text-align: center;
+}
+
+/* TOP */
+.footer-top h3 {
+  color: #D2B48C;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.footer-top p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(226, 183, 139, 0.3);
+  padding-top: 10px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+
+
+  .container {
+    padding: 0 14px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    /* 🔥 stack items */
+    align-items: flex-start;
+    padding: 18px 5%;
+  }
+
+  /* LOGO */
+  .logo {
+    width: 100%;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+  }
+
+  /* MENU */
+  .menu {
+    width: 100%;
+    justify-content: space-between;
+    /* spread nicely */
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .menu a {
+    font-size: 1.05rem;
+  }
+
+  .hero {
+    height: 80vh;
+    justify-content: center;
+  }
+
+  .hero-img {
+    object-position: center 40%;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    padding: 0 12px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-content h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .services {
+    padding: 3rem 1.2rem 2rem;
+  }
+
+  .pricing {
+    padding: 2rem 1.2rem;
+  }
+
+  .about {
+    padding: 2rem 1.2rem;
+  }
+
+  .contact {
+    padding: 2rem 1.2rem 3rem;
+  }
+
+  .services,
+  .pricing,
+  .about,
+  .contact {
+    margin-top: 1rem;
+  }
+
+  .about h2,
+  .services h2,
+  .pricing h2,
+  .contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .about p,
+  .contact p {
+    font-size: 0.92rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .service-card {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .service-left img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .price-card {
+    padding: 12px;
+  }
+
+  .about ul {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .about li {
+    padding: 10px 10px 10px 30px;
+    font-size: 0.85rem;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .contact-right iframe {
+    height: 220px;
+  }
+
+  .footer {
+    padding: 1.2rem 1rem;
+  }
+
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
