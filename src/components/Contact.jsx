@@ -18,14 +18,14 @@ function Contact() {
 
           <ul>
             <li>
-              <i class="fa-solid fa-phone"></i>
+              <i className="fa-solid fa-phone"></i>
               <a href="tel:+919825917544">
                 Call: +91 98259 17544
               </a>
             </li>
 
             <li>
-              <i class="fa-brands fa-square-whatsapp"></i>
+              <i className="fa-brands fa-square-whatsapp"></i>
               <a
                 href="https://wa.me/919825917544?text=Hi%20Jigneshbhai,%20મને%20તમારી%20માપણી%20સેવા%20વિશે%20વધુ%20માહિતી%20જોઈતી%20હતી."
                 target="_blank"
@@ -36,7 +36,7 @@ function Contact() {
             </li>
 
             <li>
-              <i class="fa-solid fa-envelope"></i>
+              <i className="fa-solid fa-envelope"></i>
               <a href="mailto:jigneshchandavaniya@gmail.com">
                 jigneshchandavaniya@gmail.com
               </a>

@@ -45,6 +45,11 @@ body {
   font-size: 1.6rem;
 }
 
+/* HAMBURGER */
+.hamburger {
+  display: none;
+}
+
 .menu {
   display: flex;
   gap: 20px;
@@ -510,33 +515,62 @@ body {
   }
 
   .navbar {
-    flex-direction: column;
-    /* 🔥 stack items */
-    align-items: flex-start;
-    padding: 18px 5%;
+    justify-content: center;
   }
 
-  /* LOGO */
+  /* LOGO CENTER */
   .logo {
     width: 100%;
+    text-align: center;
   }
 
-  .logo h2 {
-    font-size: 1.5rem;
-    margin-bottom: 6px;
+  /* SHOW HAMBURGER */
+  .hamburger {
+    display: block;
+    position: fixed;
+    left: 20px;
+    z-index: 1100;
   }
 
-  /* MENU */
-  .menu {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    justify-content: space-between;
-    /* spread nicely */
-    gap: 10px;
-    flex-wrap: wrap;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 900;
   }
 
+  /* SIDE MENU */
+  .menu {
+    position: fixed;
+    top: 60;
+    left: 0;
+    width: 70%;
+    /* 🔥 reduced width */
+    height: 100vh;
+    background: #f5f5f5;
+
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 35px;
+    padding-top: 35px;
+    gap: 25px;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* ACTIVE MENU */
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  /* LINKS */
   .menu a {
-    font-size: 1.05rem;
+    width: 100%;
+    font-size: 1.1rem;
   }
 
   .hero {
