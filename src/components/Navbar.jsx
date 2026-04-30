@@ -9,29 +9,31 @@ function Navbar() {
     };
 
     return (
-        <div className="container">
-            <div className="navbar">
-                <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-                    <i className={`fa-solid ${isOpen ? "fa-xmark" : "fa-bars"}`}></i>
-                </div>
+<div className="container">
+  <div className="navbar">
 
-                <div className="logo">
-                    <h2>Jignesh Chandvaniya</h2>
-                </div>
-            </div>
+    <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+      <i className={`fa-solid ${isOpen ? "fa-xmark" : "fa-bars"}`}></i>
+    </div>
 
-            {/* OVERLAY */}
-            {isOpen && <div className="overlay" onClick={() => setIsOpen(false)}></div>}
+    <div className="logo">
+      <h2>Jignesh Chandvaniya</h2>
+    </div>
 
-            {/* MENU */}
-            <div className={`menu ${isOpen ? "active" : ""}`}>
-                <a href="#home" onClick={closeMenu}>Home</a>
-                <a href="#services" onClick={closeMenu}>Services</a>
-                <a href="#pricing" onClick={closeMenu}>Pricing</a>
-                <a href="#about" onClick={closeMenu}>About</a>
-                <a href="#contact" onClick={closeMenu}>Contact</a>
-            </div>
-        </div>
+    {/* ✅ MOVE MENU HERE */}
+    <div className={`menu ${isOpen ? "active" : ""}`}>
+      <a href="#home" onClick={closeMenu}>Home</a>
+      <a href="#services" onClick={closeMenu}>Services</a>
+      <a href="#pricing" onClick={closeMenu}>Pricing</a>
+      <a href="#about" onClick={closeMenu}>About</a>
+      <a href="#contact" onClick={closeMenu}>Contact</a>
+    </div>
+
+  </div>
+
+  {/* OVERLAY */}
+  {isOpen && <div className="overlay" onClick={() => setIsOpen(false)}></div>}
+</div>
     );
 }
 

@@ -20,7 +20,6 @@ body {
   /* SPACE ON SIDES */
 }
 
-/* NAVBAR FIXED + PROPER SPACING */
 .navbar {
   position: fixed;
   top: 0;
@@ -31,13 +30,11 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem 5%;
-  /* 🔥 THIS FIXES LEFT/RIGHT SPACE */
-  background: #ffffff;
+  padding: 15px 40px;
+  background: #fff;
   z-index: 1000;
-
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
+
 
 .logo h2 {
   color: #8B4513;
@@ -53,6 +50,7 @@ body {
 .menu {
   display: flex;
   gap: 20px;
+  align-items: center;
   list-style: none;
 }
 
@@ -63,6 +61,7 @@ body {
   font-size: 20px;
   transition: all 0.3s ease;
   position: relative;
+  white-space: nowrap;
 }
 
 .menu a:hover {
@@ -529,9 +528,11 @@ body {
     display: block;
     position: fixed;
     left: 20px;
+    top: 18px;
     z-index: 1100;
   }
 
+  /* OVERLAY */
   .overlay {
     position: fixed;
     top: 0;
@@ -545,18 +546,19 @@ body {
   /* SIDE MENU */
   .menu {
     position: fixed;
-    top: 60;
+    top: 70px;
+    /* ✅ FIXED (you missed px before) */
     left: 0;
     width: 70%;
-    /* 🔥 reduced width */
     height: 100vh;
     background: #f5f5f5;
 
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 35px;
-    padding-top: 35px;
+
+    padding: 80px 20px;
     gap: 25px;
+
     transform: translateX(-100%);
     transition: 0.3s ease;
     z-index: 1000;
@@ -567,7 +569,6 @@ body {
     transform: translateX(0);
   }
 
-  /* LINKS */
   .menu a {
     width: 100%;
     font-size: 1.1rem;
