@@ -26,7 +26,7 @@ function Pricing() {
         </div>
 
         <div className="price-card">
-          <h3>મુજબની માપણી</h3>
+          <h3>શીટ મુજબની માપણી</h3>
           <p>શીટ મુજબ માપણી</p>
           <h4>₹ ૨૦૦૦</h4>
         </div>
